@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background: #0b3254;
+    color: rgb(190, 190, 190);
+}
+
+/* mobile first layout approach */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #09263f;
+}
+
+nav header{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+nav header button{
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 50%;
+    border: none;
+    background-color: #114b7d;
+    display: flex;
+}
+
+nav header button:active{
+    opacity: .8;
+}
+
+nav h3, .navigations{
+    margin: 15px;
+}
+
+nav header h3{
+    color: #daa520;
+    margin: 0 4px;
+}
+
+.navigations a{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    margin: 3px;
+    transition: .5s;
+}
+
+.navigations a:hover{
+    color: gold;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+#intro{
+    height: 300px;
+    background: url('https://t3.ftcdn.net/jpg/06/18/71/48/360_F_618714884_NhQqUEXrvNyU8zeg9L7h17wb16QpSq8q.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro, #about, #skills, #portfolio{
+    padding: 20px;
+}
+
+#intro h2, #intro p{
+    margin: 0;
+    color: white;
+}
+
+#intro h2{
+    font-size: 30px;
+    width: 80%;
+}
+
+#intro p{
+    font-size: 14px;
+    margin-top: 3px;
+    width: 70%;
+}
+
+#about{
+    background-color: #09263f;
+}
+
+#about .img{
+    width: 200px;
+    height: 250px;
+    background: url('https://i.pinimg.com/564x/d9/a0/13/d9a01354bd8923ae0f474c968c07bba4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#about .about-me strong{
+    color: rgba(0, 255, 255, .7);
+}
+
+#about .about-me p{
+    word-spacing: 1px;
+}
+
+#about .personal-info{
+    border: 2px solid cyan;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#about .personal-info a{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+
+#about .personal-info a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+#skills header h2, header h4{
+    margin: 0;
+}
+
+#skills header h4{
+    color: goldenrod;
+}
+
+#skills .skill-set{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#skills .skill-set .skill{
+    background-color: #114b7d;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills .skill-set .skill h4{
+    margin: 4px;
+}
+
+#skills .skill-set .skill p{
+    font-size: 12px;
+}
+
+#portfolio{
+    background-color: #09263f;
+}
+
+#portfolio header h2, header h4{
+    margin: 0;
+}
+
+#portfolio header h4{
+    color: goldenrod;
+}
+
+#portfolio .projects{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#portfolio .projects .project{
+    background-color: #114b7d;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#portfolio .projects .project h4, h5{
+    margin: 4px;
+}
+
+#portfolio .projects .project p{
+    font-size: 12px;
+}
+
+#portfolio .projects .project a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(190, 190, 190);
+}
+
+/* laptop/desktop layout */
+@media (min-width: 769px){
+    nav h3{
+        font-size: 24px;
+    }
+
+    #intro h2{
+        font-size: 32px;
+    }
+
+    #about {
+        display: flex;
+        justify-content: center;
+    }
+
+    #about .img{
+        width: 300px;
+        height: 350px;
+    }
+
+    #about .img, .person{
+        margin: 10px;
+    }
+
+    #about .person{
+        width: 50%;
+    }
+
+    #about .person .about-me h3{
+        margin: 0;
+        font-size: 25px;
+    }
+
+    #about .person .personal-info{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #skills header h2, #portfolio header h2{
+        font-size: 32px;
+    }
+
+    #skills header h4, #portfolio header h4{
+        font-size: 20px;
+    }
+
+    #skills .skill-set, #portfolio .projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
